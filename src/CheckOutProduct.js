@@ -12,6 +12,7 @@ function CheckOutProduct(props) {
       id: props.id,
     });
   };
+
   return (
     <div className="checkoutProduct">
       <img className="checkoutProduct__image" src={props.image} />

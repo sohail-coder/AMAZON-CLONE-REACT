@@ -2,10 +2,13 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./Login.css";
 import { auth } from "./firebase";
+import { useStateValue } from "./StateProvider";
+
 function Login() {
   const history = useHistory();
   const [mail, setMail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [{ user }, dispatch] = useStateValue();
   const signin = (e) => {
     e.preventDefault();
     auth
@@ -28,7 +31,7 @@ function Login() {
 
   return (
     <div className="login">
-      <Link to="/">
+      <Link to={"/"}>
         <img
           className="login__image"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"

@@ -1,0 +1,22 @@
+/* .emptycart {
+  object-fit: contain;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+} */
+
+.logo {
+  text-align: center;
+}
+.emptycart__image {
+  margin-top: 30px;
+
+  object-fit: contain;
+  width: 200px;
+  height: 200px;
+}
+.emptycart > h2 {
+  margin-top: 30px;
+  text-align: center;
+  color: black;
+}
