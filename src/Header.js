@@ -5,6 +5,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
+import Login from "./Login.js";
 function Header() {
   var [basketCount, setBasketCount] = React.useState(0);
   const [{ basket }, dispatch] = useStateValue();
@@ -33,7 +34,11 @@ function Header() {
       <div className="header__nav">
         <div className="header__options">
           <span className="header__optionLineOne">Hello, Guest</span>
-          <span className="header__optionLineTwo">Sign In</span>
+          <Link to="/login">
+            <span className="header__optionLineTwo" style={{ color: "white" }}>
+              Sign In
+            </span>
+          </Link>
         </div>
 
         <div className="header__options">
